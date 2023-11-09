@@ -65,7 +65,7 @@ async function recreateDB(){
  // Delete everything
  await motor.deleteMany();
  let instance1 = new 
-motor({motor_name:"Toyota", moder_model:'Camry', 
+motor({motor_name:"Toyota", motor_model:'Camry', 
 motor_price:25000});
  instance1.save().then(doc=>{
  console.log("First object saved")}
@@ -73,7 +73,7 @@ motor_price:25000});
  console.error(err)
  });
  let instance2 = new 
- motor({motor_name:"Honda", moder_model:'Civic', 
+ motor({motor_name:"Honda", motor_model:'Civic', 
 motor_price:22000});
 instance2.save().then(doc=>{
  console.log("Second object saved")}
@@ -81,7 +81,7 @@ instance2.save().then(doc=>{
  console.error(err)
  });
  let instance3 = new 
- motor({motor_name:"Toyota", moder_model:'F-150', 
+ motor({motor_name:"Toyota", motor_model:'F-150', 
 motor_price:35000});
  instance3.save().then(doc=>{
  console.log("Third object saved")}

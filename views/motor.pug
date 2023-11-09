@@ -2,20 +2,16 @@ extends layout
 
 block content
   h1= title
-  p Welcome to the new page #{title}. There is a change made in paragraph.
-  button(type="button", class="btn btn-secondary", onclick="goFaster()") Press Me
-  div#faster
-    | Increase the speed
+  - const items = results;
+  .container-fluid
+    .row
+      each motor,index in items
+        div(class="col-sm-2" onclick=`buy(${index})`)
+          h3 #{motor.motor_name}
+          p Model: #{motor.motor_model}
+          p Price: $#{motor.motor_price}
+  
   script.
-    var mph = 20;
-    var change = 1;
-    function goFaster() {
-        mph += change;
-        change += 1;
-        document.getElementById("faster").innerText = "MPH " + mph + " with change " + change;
-      }
-    - const items = results
-    each motor in items
-      h3 motor.motor_name
-      p Model: motor.motor_model
-      p Price: motor.motor_price
+    function buy(index) {
+        alert(`You purchased : ${index}`)
+    }
