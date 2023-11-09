@@ -21,6 +21,7 @@ var usersRouter = require('./routes/users');
 var motorRouter = require('./routes/motor');
 var boardRouter = require('./routes/board');
 var chooseRouter = require('./routes/choose');
+var resourceRouter = require('./routes/resource');
 var motor = require("./models/motor");
 
 var app = express();
@@ -40,7 +41,7 @@ app.use('/users', usersRouter);
 app.use('/motor', motorRouter);
 app.use('/board', boardRouter);
 app.use('/choose', chooseRouter);
-
+app.use('/resource', resourceRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
