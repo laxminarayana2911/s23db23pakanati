@@ -14,12 +14,8 @@ block content
         change += 1;
         document.getElementById("faster").innerText = "MPH " + mph + " with change " + change;
       }
-    - const results = [
-    - { motor_name: "Toyota", motor_model: "Camry", motor_price: 25000 },
-    - { motor_name: "Honda", motor_model: "Civic", motor_price: 22000 },
-    - { motor_name: "Ford", motor_model: "F-150", motor_price: 35000 }
-    - ]
-    each motor in results
+    - const items = results
+    each motor in items
       h3 motor.motor_name
       p Model: motor.motor_model
       p Price: motor.motor_price

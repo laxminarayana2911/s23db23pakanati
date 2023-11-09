@@ -21,13 +21,26 @@ exports.motor_update_put = function(req, res) {
 };
 
 // List of all Costumes
-exports.costume_list = async function(req, res) {
+exports.motor_list = async function(req, res) {
     try{
-    theCostumes = await Costume.find();
-    res.send(theCostumes);
+    theMotor = await motor.find();
+    res.send(theMotor);
     }
     catch(err){
     res.status(500);
     res.send(`{"error": ${err}}`);
     } 
    }
+
+   // VIEWS
+// Handle a show all view
+exports.motor_view_all_Page = async function(req, res) {
+    try{
+    themotor = await motor.find();
+    res.render('motor', { title: 'Motor Search Results', results: themotor });
+    }
+    catch(err){
+    res.status(500);
+    res.send(`{"error": ${err}}`);
+    } 
+   };

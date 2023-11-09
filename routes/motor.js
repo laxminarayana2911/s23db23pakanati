@@ -1,9 +1,7 @@
 var express = require('express');
+const motor_controlers= require('../controllers/motor');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('motor', { title: 'Search Results' });
-});
-
-module.exports = router;
+/* GET costumes */
+router.get('/', motor_controlers.motor_view_all_Page );
+module.exports = router
