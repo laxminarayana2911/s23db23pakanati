@@ -4,9 +4,9 @@ exports.motor_list = function(req, res) {
  res.send('NOT IMPLEMENTED: motor list');
 };
 // for a specific motor.
-//exports.motor_detail = function(req, res) {
-// res.send('NOT IMPLEMENTED: motor detail: ' + req.params.id);
-//};
+exports.motor_detail = function(req, res) {
+ res.send('NOT IMPLEMENTED: motor detail: ' + req.params.id);
+};
 // for a specific eagle.
 exports.motor_detail = async function(req, res) {
     console.log("detail" + req.params.id)
