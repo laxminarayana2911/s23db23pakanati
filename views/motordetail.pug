@@ -1,20 +1,25 @@
 extends layout
+
 block content
- h1= title
- - let motorid = toShow._id
- - let motor_name = toShow.motor_name
- - let motor_model = toShow.motor_model
- - let motor_price = toShow.motor_price
- div
- div.row
- div(class='motorAttr mr-3') Motor ID is:
- div #{motorid}
- div.row
- div(class='motorAttr mr-3') Motor Name is:
- div #{motor_name}
- div.row
- div(class='motorAttr mr-3') Motor Model is:
- div #{motor_model}
- div.row
- div(class='motorAttr mr-3') Motor Price is:
- div #{motor_price}
+  h1= title
+  - let motorid = toShow._id
+  - let motor_name = toShow.motor_name
+  - let motor_model = toShow.motor_model
+  - let motor_price = toShow.motor_price
+
+  div
+    div.row
+      div(class='motorAttr mr-3') Motor ID is:
+      div #{motorid}
+
+    div.row
+      div(class='motorAttr mr-3') Motor Name is:
+      div #{motor_name}
+
+    div.row
+      div(class='motorAttr mr-3') Motor Model is:
+      div #{motor_model}
+
+    div.row
+      div(class='motorAttr mr-3') Motor Price is:
+      div #{motor_price}
