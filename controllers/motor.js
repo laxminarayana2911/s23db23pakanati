@@ -100,3 +100,17 @@ exports.motor_update_put = async function(req, res) {
     failed`);
     }
     };
+
+// Handle Costume delete on DELETE.
+exports.motor_delete = async function(req, res) {
+    console.log("delete " + req.params.id)
+    try {
+    result = await motor.findByIdAndDelete( req.params.id)
+    console.log("Removed " + result)
+    res.send(result)
+    } catch (err) {
+    res.status(500)
+    res.send(`{"error": Error deleting ${err}}`);
+    }
+   };
+   
