@@ -8,4 +8,7 @@ router.get('/', motor_controlers.motor_view_all_Page );
 router.get('/detail', motor_controlers.motor_view_one_Page);
 /* GET create costume page */
 router.get('/create', motor_controlers.motor_create_Page);
+/* GET create update page */
+router.get('/update', motor_controlers.motor_update_Page);
+
 module.exports = router

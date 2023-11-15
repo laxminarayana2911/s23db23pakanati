@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  h1= title
+  - let motorid = toShow._id
+  - let motor_name = toShow.motor_name
+  - let motor_model = toShow.motor_model
+  - let motor_price = toShow.motor_price
+
+  div.row(class='mb-2')
+    div.mr-1 ID is
+    div #{motorid}
+
+  - let actionid = "/resource/motor/" + motorid
+
+  form(id='motorForm', action= actionid, method="PUT")
+    div.form-group
+      label.motorAttr(for='motor_name') Motor Name
+      input#motor_name(type='text', name='motor_name', value= motor_name )
+
+    div.form-group
+      label.motorAttr(for='motor_model') Motor Model
+      input#motor_model(type='text', name='motor_model', value= motor_model )
+
+    div.form-group
+      label.motorAttr(for='motor_price') Motor Price
+      input#motor_price(type='number', name='motor_price', value= motor_price )
+
+    input(type="submit")
+
+  script.
+    document.forms['motorForm'].addEventListener('submit', (event) => {
+      event.preventDefault();
+      // TODO do something here to show user that form is being submitted
+      fetch(event.target.action, {
+        method: 'PUT',
+        body: new URLSearchParams(new FormData(event.target)) // event.target is the form
+      }).then((resp) => {
+        return resp.json(); // or resp.text() or whatever the server sends
+      }).then((body) => {
+        alert("Update succeeded");
+        // TODO handle body
+      }).catch((error) => {
+        // TODO handle error
+        alert("Update failed: " + error);
+      });
+    });
