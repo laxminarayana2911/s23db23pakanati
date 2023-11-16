@@ -3,15 +3,15 @@ block content
   h1= title
   form(id='motorForm', action="/resource/motor", method="POST")
     div.form-group
-      label.motorAttr(for='motor_name') Motor Name
-      input#motor_name(type='text', name='motor_name')
+      label.updateStyle(for='motor_name') Motor Name
+      input.select#motor_name(type='text', name='motor_name')
     div.form-group
-      label.motorAttr(for='motor_model') Motor Model
-      input#motor_model(type='text', name='motor_model')
+      label.updateStyle(for='motor_model') Motor Model
+      input.select#motor_model(type='text', name='motor_model')
     div.form-group
-      label.motorAttr(for='motor_price') Motor Price
-      input#motor_price(type='number', name='motor_price')
-    input(type="submit")
+      label.updateStyle(for='motor_price') Motor Price
+      input.select#motor_price(type='number', name='motor_price')
+    input.buttonStyle(type="submit")
   script.
     document.forms.motorForm.addEventListener('submit', (event) => {
       event.preventDefault();

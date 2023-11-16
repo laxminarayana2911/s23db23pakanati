@@ -11,4 +11,32 @@ a {
   background-color: aquamarine;
   width: 120px;
  }
- 
+
+ .updateStyle{
+  padding: 15px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #0465aa;
+  border: none;
+  color: rgb(219, 187, 187);
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+ }
+ .buttonStyle{
+  box-sizing: border-box;
+  background-color: #aa2b04;
+  border: none;
+  color: rgb(219, 187, 187);
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+ }
+ .select {
+  padding: 16px 20px;
+  border: 5px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
