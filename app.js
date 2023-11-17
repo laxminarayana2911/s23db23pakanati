@@ -44,6 +44,13 @@ var boardRouter = require('./routes/board');
 var chooseRouter = require('./routes/choose');
 var resourceRouter = require('./routes/resource');
 var motor = require("./models/motor");
+// passport config
+// Use the existing connection
+// The Account model 
+var Account =require('./models/account');
+passport.use(new LocalStrategy(Account.authenticate()));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
 
 var app = express();
 
